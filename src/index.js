@@ -10,6 +10,13 @@ const baseUrl = "https://platzi-avo.vercel.app";
 
 const appNode = document.querySelector('#app');
 
+appNode.addEventListener('click', ( event ) => {
+    if(event.target.nodeName === 'H2') {
+        alert(event.target.textContent);
+    }
+});
+
+
 const formatPrice = (price) => {
     return new Intl.NumberFormat('es-CO', {
         style: 'currency',
@@ -41,6 +48,10 @@ window.
             const title = document.createElement('h2');
             title.className = 'text-lg text-center text-gray-800 font-bold';
             title.textContent = avo.name;
+            //Si son pocos elementos no hay problema pero si ya son muchos items se debe realizar por delegación de eventos
+            // title.addEventListener('click', () => {
+            //     alert(avo.name);
+            // });
             //Crear precio
             const price = document.createElement('div');
             price.className = 'text-gray-800 text-center';
