@@ -1,4 +1,5 @@
 {
+  "homepage": "https://github.com/dmDuvanMejia/platzi-manipulacion-dom",
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
